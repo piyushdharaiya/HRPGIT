@@ -8,7 +8,8 @@ End Code
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table" id="table"><thead>
+     
     <tr>
         <th>
             @Html.DisplayNameFor(Function(model) model.wfd)
@@ -32,9 +33,9 @@ End Code
             @Html.DisplayNameFor(Function(model) model.FYMaster.FY)
         </th>
         <th></th>
-    </tr>
-
-@For Each item In Model
+    </tr></thead>
+    <tbody>
+        @For Each item In Model
     @<tr>
         <td>
             @Html.DisplayFor(Function(modelItem) item.wfd)
@@ -60,11 +61,20 @@ End Code
         <td>
             @Html.ActionLink("Salary Comp.", "../EmpSalaryComponents/index", New With {.id = item.Id}) |
             @Html.ActionLink("Monthly Salary", "../EmpMonthlySalaries/index", New With {.id = item.Id}) |
-            @Html.ActionLink("Edit", "Edit", New With {.id = item.Id }) |
-            @Html.ActionLink("Details", "Details", New With {.id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", New With {.id = item.Id })
+            @Html.ActionLink("Edit", "Edit", New With {.id = item.Id}) |
+            @Html.ActionLink("Details", "Details", New With {.id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = item.Id})
         </td>
     </tr>
-Next
-
+        Next
+    </tbody>
 </table>
+
+@section Scripts
+    <script>
+    $(document).ready(function () {
+        $('#table').DataTable();
+    });
+
+    </script>
+End Section
