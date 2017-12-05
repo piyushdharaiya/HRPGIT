@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HRP1Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HRP1ModelStoreContainer">
+    <EntitySet Name="DeptMasts" EntityType="HRP1Model.Store.DeptMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpLeaves" EntityType="HRP1Model.Store.EmpLeaves" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpLevels" EntityType="HRP1Model.Store.EmpLevels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeMasts" EntityType="HRP1Model.Store.EmployeeMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeSalaryMasts" EntityType="HRP1Model.Store.EmployeeSalaryMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployerMasts" EntityType="HRP1Model.Store.EmployerMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpMonthlyComponets" EntityType="HRP1Model.Store.EmpMonthlyComponets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpMonthlySalaries" EntityType="HRP1Model.Store.EmpMonthlySalaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpSalaryComponents" EntityType="HRP1Model.Store.EmpSalaryComponents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FYMasters" EntityType="HRP1Model.Store.FYMasters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HolidaysMasts" EntityType="HRP1Model.Store.HolidaysMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LeaveMasts" EntityType="HRP1Model.Store.LeaveMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalaryComponentMasts" EntityType="HRP1Model.Store.SalaryComponentMasts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="View_2" EntityType="HRP1Model.Store.View_2" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_DeptMastEmployeeMast" Association="HRP1Model.Store.FK_DeptMastEmployeeMast">
+      <End Role="DeptMasts" EntitySet="DeptMasts" />
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMastEmpLeaves" Association="HRP1Model.Store.FK_EmployeeMastEmpLeaves">
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+      <End Role="EmpLeaves" EntitySet="EmpLeaves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeaveMastEmpLeaves" Association="HRP1Model.Store.FK_LeaveMastEmpLeaves">
+      <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+      <End Role="EmpLeaves" EntitySet="EmpLeaves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpLevelEmployeeMast" Association="HRP1Model.Store.FK_EmpLevelEmployeeMast">
+      <End Role="EmpLevels" EntitySet="EmpLevels" />
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeMastEmployeeSalaryMast" Association="HRP1Model.Store.FK_EmployeeMastEmployeeSalaryMast">
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+      <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployerMastEmployeeMast" Association="HRP1Model.Store.FK_EmployerMastEmployeeMast">
+      <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FYMasterEmployeeMast" Association="HRP1Model.Store.FK_FYMasterEmployeeMast">
+      <End Role="FYMasters" EntitySet="FYMasters" />
+      <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalaryMastEmpMonthlySalary" Association="HRP1Model.Store.FK_EmployeeSalaryMastEmpMonthlySalary">
+      <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+      <End Role="EmpMonthlySalaries" EntitySet="EmpMonthlySalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeSalaryMastEmpSalaryComponent" Association="HRP1Model.Store.FK_EmployeeSalaryMastEmpSalaryComponent">
+      <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+      <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FYMasterEmployeeSalaryMast" Association="HRP1Model.Store.FK_FYMasterEmployeeSalaryMast">
+      <End Role="FYMasters" EntitySet="FYMasters" />
+      <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployerMastHolidaysMast" Association="HRP1Model.Store.FK_EmployerMastHolidaysMast">
+      <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+      <End Role="HolidaysMasts" EntitySet="HolidaysMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployerMastLeaveMast" Association="HRP1Model.Store.FK_EmployerMastLeaveMast">
+      <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+      <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FYMasterEmployerMast" Association="HRP1Model.Store.FK_FYMasterEmployerMast">
+      <End Role="FYMasters" EntitySet="FYMasters" />
+      <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpMonthlySalaryEmpMonthlyComponet" Association="HRP1Model.Store.FK_EmpMonthlySalaryEmpMonthlyComponet">
+      <End Role="EmpMonthlySalaries" EntitySet="EmpMonthlySalaries" />
+      <End Role="EmpMonthlyComponets" EntitySet="EmpMonthlyComponets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpSalaryComponentEmpMonthlyComponet" Association="HRP1Model.Store.FK_EmpSalaryComponentEmpMonthlyComponet">
+      <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+      <End Role="EmpMonthlyComponets" EntitySet="EmpMonthlyComponets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalaryComponentMastEmpSalaryComponent" Association="HRP1Model.Store.FK_SalaryComponentMastEmpSalaryComponent">
+      <End Role="SalaryComponentMasts" EntitySet="SalaryComponentMasts" />
+      <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FYMasterHolidaysMast" Association="HRP1Model.Store.FK_FYMasterHolidaysMast">
+      <End Role="FYMasters" EntitySet="FYMasters" />
+      <End Role="HolidaysMasts" EntitySet="HolidaysMasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FYMasterLeaveMast" Association="HRP1Model.Store.FK_FYMasterLeaveMast">
+      <End Role="FYMasters" EntitySet="FYMasters" />
+      <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DeptMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dept_Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpLeaves">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromDate" Type="datetime" Nullable="false" />
+    <Property Name="Todate" Type="datetime" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LeaveDays" Type="int" Nullable="false" />
+    <Property Name="LeaveStatus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmployeeMastId" Type="int" Nullable="false" />
+    <Property Name="LeaveMastId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpLevels">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LevelName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="wfd" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="PANno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UANNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ESINo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PFNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JoinofDate" Type="datetime" Nullable="false" />
+    <Property Name="city" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pinCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Emailid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BankName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Accountno" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IFSCCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="isactive" Type="bit" Nullable="true" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DeptMastId" Type="int" Nullable="false" />
+    <Property Name="EmpLevelId" Type="int" Nullable="false" />
+    <Property Name="EmployerMast_cc1" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeSalaryMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wfd" Type="datetime" Nullable="false" />
+    <Property Name="CTCMonthly" Type="float" Nullable="false" />
+    <Property Name="CTCYear" Type="float" Nullable="false" />
+    <Property Name="Fixcompamt" Type="float" Nullable="false" />
+    <Property Name="flexcompamt" Type="float" Nullable="false" />
+    <Property Name="EmployeeMastId" Type="int" Nullable="false" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EmployerMasts">
+    <Key>
+      <PropertyRef Name="cc" />
+    </Key>
+    <Property Name="cc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PANNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="remarks" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pincode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Emailid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="isactive" Type="bit" Nullable="true" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EmpMonthlyComponets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="amount" Type="float" Nullable="false" />
+    <Property Name="EmpMonthlySalaryId" Type="int" Nullable="false" />
+    <Property Name="EmpSalaryComponentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpMonthlySalaries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkingMonthDate" Type="datetime" Nullable="false" />
+    <Property Name="TotalDays" Type="smallint" Nullable="false" />
+    <Property Name="WorkingDays" Type="smallint" Nullable="false" />
+    <Property Name="LeaveDays" Type="smallint" Nullable="false" />
+    <Property Name="TotalSalaryAmount" Type="float" Nullable="false" />
+    <Property Name="OnhandAmount" Type="float" Nullable="false" />
+    <Property Name="Deductamount" Type="float" Nullable="false" />
+    <Property Name="EmployeeSalaryMastId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpSalaryComponents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="EmployeeSalaryMastId" Type="int" Nullable="false" />
+    <Property Name="SalaryComponentMastId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FYMasters">
+    <Key>
+      <PropertyRef Name="FY" />
+    </Key>
+    <Property Name="FY" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HolidaysMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HolidaysName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HolidaysDate" Type="datetime" Nullable="false" />
+    <Property Name="wfd" Type="datetime" Nullable="false" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmployerMast_cc" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeaveMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeaveName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NoofDays" Type="int" Nullable="true" />
+    <Property Name="wfd" Type="datetime" Nullable="false" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmployerMast_cc" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalaryComponentMasts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wfd" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompType" Type="int" Nullable="false" />
+    <Property Name="TypeRsPer" Type="int" Nullable="false" />
+    <Property Name="amount" Type="float" Nullable="false" />
+    <Property Name="basedoncomponent" Type="int" Nullable="true" />
+    <Property Name="Compcalcutiontype" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_2">
+    <Key>
+      <PropertyRef Name="EmployeeSalaryMastsid" />
+      <PropertyRef Name="EmployeeSalaryMastswfd" />
+      <PropertyRef Name="CTCMonthly" />
+      <PropertyRef Name="CTCYear" />
+      <PropertyRef Name="Fixcompamt" />
+      <PropertyRef Name="flexcompamt" />
+      <PropertyRef Name="EmployeeMastId" />
+      <PropertyRef Name="FYMasterFY" />
+      <PropertyRef Name="EmpSalaryComponentsid" />
+      <PropertyRef Name="EmpSalaryComponentsamount" />
+      <PropertyRef Name="EmployeeSalaryMastId" />
+      <PropertyRef Name="SalaryComponentMastId" />
+      <PropertyRef Name="SalaryComponentMastsid" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="CompType" />
+      <PropertyRef Name="TypeRsPer" />
+      <PropertyRef Name="amount" />
+      <PropertyRef Name="Compcalcutiontype" />
+    </Key>
+    <Property Name="EmployeeSalaryMastsid" Type="int" Nullable="false" />
+    <Property Name="EmployeeSalaryMastswfd" Type="datetime" Nullable="false" />
+    <Property Name="CTCMonthly" Type="float" Nullable="false" />
+    <Property Name="CTCYear" Type="float" Nullable="false" />
+    <Property Name="Fixcompamt" Type="float" Nullable="false" />
+    <Property Name="flexcompamt" Type="float" Nullable="false" />
+    <Property Name="EmployeeMastId" Type="int" Nullable="false" />
+    <Property Name="FYMasterFY" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmpSalaryComponentsid" Type="int" Nullable="false" />
+    <Property Name="EmpSalaryComponentsamount" Type="float" Nullable="false" />
+    <Property Name="EmployeeSalaryMastId" Type="int" Nullable="false" />
+    <Property Name="SalaryComponentMastId" Type="int" Nullable="false" />
+    <Property Name="SalaryComponentMastsid" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompType" Type="int" Nullable="false" />
+    <Property Name="TypeRsPer" Type="int" Nullable="false" />
+    <Property Name="amount" Type="float" Nullable="false" />
+    <Property Name="basedoncomponent" Type="int" Nullable="true" />
+    <Property Name="Compcalcutiontype" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DeptMastEmployeeMast">
+    <End Role="DeptMasts" Type="HRP1Model.Store.DeptMasts" Multiplicity="1" />
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeptMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeMasts">
+        <PropertyRef Name="DeptMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMastEmpLeaves">
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="1" />
+    <End Role="EmpLeaves" Type="HRP1Model.Store.EmpLeaves" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpLeaves">
+        <PropertyRef Name="EmployeeMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeaveMastEmpLeaves">
+    <End Role="LeaveMasts" Type="HRP1Model.Store.LeaveMasts" Multiplicity="1" />
+    <End Role="EmpLeaves" Type="HRP1Model.Store.EmpLeaves" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeaveMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpLeaves">
+        <PropertyRef Name="LeaveMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpLevelEmployeeMast">
+    <End Role="EmpLevels" Type="HRP1Model.Store.EmpLevels" Multiplicity="1" />
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpLevels">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeMasts">
+        <PropertyRef Name="EmpLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeMastEmployeeSalaryMast">
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="1" />
+    <End Role="EmployeeSalaryMasts" Type="HRP1Model.Store.EmployeeSalaryMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeSalaryMasts">
+        <PropertyRef Name="EmployeeMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployerMastEmployeeMast">
+    <End Role="EmployerMasts" Type="HRP1Model.Store.EmployerMasts" Multiplicity="1" />
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerMasts">
+        <PropertyRef Name="cc" />
+      </Principal>
+      <Dependent Role="EmployeeMasts">
+        <PropertyRef Name="EmployerMast_cc1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FYMasterEmployeeMast">
+    <End Role="FYMasters" Type="HRP1Model.Store.FYMasters" Multiplicity="1" />
+    <End Role="EmployeeMasts" Type="HRP1Model.Store.EmployeeMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYMasters">
+        <PropertyRef Name="FY" />
+      </Principal>
+      <Dependent Role="EmployeeMasts">
+        <PropertyRef Name="FYMasterFY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalaryMastEmpMonthlySalary">
+    <End Role="EmployeeSalaryMasts" Type="HRP1Model.Store.EmployeeSalaryMasts" Multiplicity="1" />
+    <End Role="EmpMonthlySalaries" Type="HRP1Model.Store.EmpMonthlySalaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeSalaryMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpMonthlySalaries">
+        <PropertyRef Name="EmployeeSalaryMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeSalaryMastEmpSalaryComponent">
+    <End Role="EmployeeSalaryMasts" Type="HRP1Model.Store.EmployeeSalaryMasts" Multiplicity="1" />
+    <End Role="EmpSalaryComponents" Type="HRP1Model.Store.EmpSalaryComponents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeSalaryMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpSalaryComponents">
+        <PropertyRef Name="EmployeeSalaryMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FYMasterEmployeeSalaryMast">
+    <End Role="FYMasters" Type="HRP1Model.Store.FYMasters" Multiplicity="1" />
+    <End Role="EmployeeSalaryMasts" Type="HRP1Model.Store.EmployeeSalaryMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYMasters">
+        <PropertyRef Name="FY" />
+      </Principal>
+      <Dependent Role="EmployeeSalaryMasts">
+        <PropertyRef Name="FYMasterFY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployerMastHolidaysMast">
+    <End Role="EmployerMasts" Type="HRP1Model.Store.EmployerMasts" Multiplicity="1" />
+    <End Role="HolidaysMasts" Type="HRP1Model.Store.HolidaysMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerMasts">
+        <PropertyRef Name="cc" />
+      </Principal>
+      <Dependent Role="HolidaysMasts">
+        <PropertyRef Name="EmployerMast_cc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployerMastLeaveMast">
+    <End Role="EmployerMasts" Type="HRP1Model.Store.EmployerMasts" Multiplicity="1" />
+    <End Role="LeaveMasts" Type="HRP1Model.Store.LeaveMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerMasts">
+        <PropertyRef Name="cc" />
+      </Principal>
+      <Dependent Role="LeaveMasts">
+        <PropertyRef Name="EmployerMast_cc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FYMasterEmployerMast">
+    <End Role="FYMasters" Type="HRP1Model.Store.FYMasters" Multiplicity="1" />
+    <End Role="EmployerMasts" Type="HRP1Model.Store.EmployerMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYMasters">
+        <PropertyRef Name="FY" />
+      </Principal>
+      <Dependent Role="EmployerMasts">
+        <PropertyRef Name="FYMasterFY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpMonthlySalaryEmpMonthlyComponet">
+    <End Role="EmpMonthlySalaries" Type="HRP1Model.Store.EmpMonthlySalaries" Multiplicity="1" />
+    <End Role="EmpMonthlyComponets" Type="HRP1Model.Store.EmpMonthlyComponets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpMonthlySalaries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpMonthlyComponets">
+        <PropertyRef Name="EmpMonthlySalaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpSalaryComponentEmpMonthlyComponet">
+    <End Role="EmpSalaryComponents" Type="HRP1Model.Store.EmpSalaryComponents" Multiplicity="1" />
+    <End Role="EmpMonthlyComponets" Type="HRP1Model.Store.EmpMonthlyComponets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpSalaryComponents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpMonthlyComponets">
+        <PropertyRef Name="EmpSalaryComponentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalaryComponentMastEmpSalaryComponent">
+    <End Role="SalaryComponentMasts" Type="HRP1Model.Store.SalaryComponentMasts" Multiplicity="1" />
+    <End Role="EmpSalaryComponents" Type="HRP1Model.Store.EmpSalaryComponents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalaryComponentMasts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmpSalaryComponents">
+        <PropertyRef Name="SalaryComponentMastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FYMasterHolidaysMast">
+    <End Role="FYMasters" Type="HRP1Model.Store.FYMasters" Multiplicity="1" />
+    <End Role="HolidaysMasts" Type="HRP1Model.Store.HolidaysMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYMasters">
+        <PropertyRef Name="FY" />
+      </Principal>
+      <Dependent Role="HolidaysMasts">
+        <PropertyRef Name="FYMasterFY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FYMasterLeaveMast">
+    <End Role="FYMasters" Type="HRP1Model.Store.FYMasters" Multiplicity="1" />
+    <End Role="LeaveMasts" Type="HRP1Model.Store.LeaveMasts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYMasters">
+        <PropertyRef Name="FY" />
+      </Principal>
+      <Dependent Role="LeaveMasts">
+        <PropertyRef Name="FYMasterFY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HRP1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DeptMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dept_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmployeeMasts" Relationship="Self.FK_DeptMastEmployeeMast" FromRole="DeptMasts" ToRole="EmployeeMasts" />
+        </EntityType>
+        <EntityType Name="EmpLeaf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Todate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LeaveDays" Type="Int32" Nullable="false" />
+          <Property Name="LeaveStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeMastId" Type="Int32" Nullable="false" />
+          <Property Name="LeaveMastId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeMast" Relationship="Self.FK_EmployeeMastEmpLeaves" FromRole="EmpLeaves" ToRole="EmployeeMasts" />
+          <NavigationProperty Name="LeaveMast" Relationship="Self.FK_LeaveMastEmpLeaves" FromRole="EmpLeaves" ToRole="LeaveMasts" />
+        </EntityType>
+        <EntityType Name="EmpLevel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LevelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="wfd" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="EmployeeMasts" Relationship="Self.FK_EmpLevelEmployeeMast" FromRole="EmpLevels" ToRole="EmployeeMasts" />
+        </EntityType>
+        <EntityType Name="EmployeeMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PANno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UANNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESINo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PFNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="JoinofDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="city" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pinCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Emailid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BankName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Accountno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IFSCCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="isactive" Type="Boolean" />
+          <Property Name="FYMasterFY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DeptMastId" Type="Int32" Nullable="false" />
+          <Property Name="EmpLevelId" Type="Int32" Nullable="false" />
+          <Property Name="EmployerMast_cc1" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DeptMast" Relationship="Self.FK_DeptMastEmployeeMast" FromRole="EmployeeMasts" ToRole="DeptMasts" />
+          <NavigationProperty Name="EmpLeaves" Relationship="Self.FK_EmployeeMastEmpLeaves" FromRole="EmployeeMasts" ToRole="EmpLeaves" />
+          <NavigationProperty Name="EmpLevel" Relationship="Self.FK_EmpLevelEmployeeMast" FromRole="EmployeeMasts" ToRole="EmpLevels" />
+          <NavigationProperty Name="EmployeeSalaryMasts" Relationship="Self.FK_EmployeeMastEmployeeSalaryMast" FromRole="EmployeeMasts" ToRole="EmployeeSalaryMasts" />
+          <NavigationProperty Name="EmployerMast" Relationship="Self.FK_EmployerMastEmployeeMast" FromRole="EmployeeMasts" ToRole="EmployerMasts" />
+          <NavigationProperty Name="FYMaster" Relationship="Self.FK_FYMasterEmployeeMast" FromRole="EmployeeMasts" ToRole="FYMasters" />
+        </EntityType>
+        <EntityType Name="EmployeeSalaryMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="wfd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CTCMonthly" Type="Double" Nullable="false" />
+          <Property Name="CTCYear" Type="Double" Nullable="false" />
+          <Property Name="Fixcompamt" Type="Double" Nullable="false" />
+          <Property Name="flexcompamt" Type="Double" Nullable="false" />
+          <Property Name="EmployeeMastId" Type="Int32" Nullable="false" />
+          <Property Name="FYMasterFY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmployeeMast" Relationship="Self.FK_EmployeeMastEmployeeSalaryMast" FromRole="EmployeeSalaryMasts" ToRole="EmployeeMasts" />
+          <NavigationProperty Name="EmpMonthlySalaries" Relationship="Self.FK_EmployeeSalaryMastEmpMonthlySalary" FromRole="EmployeeSalaryMasts" ToRole="EmpMonthlySalaries" />
+          <NavigationProperty Name="EmpSalaryComponents" Relationship="Self.FK_EmployeeSalaryMastEmpSalaryComponent" FromRole="EmployeeSalaryMasts" ToRole="EmpSalaryComponents" />
+          <NavigationProperty Name="FYMaster" Relationship="Self.FK_FYMasterEmployeeSalaryMast" FromRole="EmployeeSalaryMasts" ToRole="FYMasters" />
+        </EntityType>
+        <EntityType Name="EmployerMast">
+          <Key>
+            <PropertyRef Name="cc" />
+          </Key>
+          <Property Name="cc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PANNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pincode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Emailid" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="isactive" Type="Boolean" />
+          <Property Name="FYMasterFY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmployeeMasts" Relationship="Self.FK_EmployerMastEmployeeMast" FromRole="EmployerMasts" ToRole="EmployeeMasts" />
+          <NavigationProperty Name="HolidaysMasts" Relationship="Self.FK_EmployerMastHolidaysMast" FromRole="EmployerMasts" ToRole="HolidaysMasts" />
+          <NavigationProperty Name="LeaveMasts" Relationship="Self.FK_EmployerMastLeaveMast" FromRole="EmployerMasts" ToRole="LeaveMasts" />
+          <NavigationProperty Name="FYMaster" Relationship="Self.FK_FYMasterEmployerMast" FromRole="EmployerMasts" ToRole="FYMasters" />
+        </EntityType>
+        <EntityType Name="EmpMonthlyComponet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Double" Nullable="false" />
+          <Property Name="EmpMonthlySalaryId" Type="Int32" Nullable="false" />
+          <Property Name="EmpSalaryComponentId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmpMonthlySalary" Relationship="Self.FK_EmpMonthlySalaryEmpMonthlyComponet" FromRole="EmpMonthlyComponets" ToRole="EmpMonthlySalaries" />
+          <NavigationProperty Name="EmpSalaryComponent" Relationship="Self.FK_EmpSalaryComponentEmpMonthlyComponet" FromRole="EmpMonthlyComponets" ToRole="EmpSalaryComponents" />
+        </EntityType>
+        <EntityType Name="EmpMonthlySalary">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkingMonthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalDays" Type="Int16" Nullable="false" />
+          <Property Name="WorkingDays" Type="Int16" Nullable="false" />
+          <Property Name="LeaveDays" Type="Int16" Nullable="false" />
+          <Property Name="TotalSalaryAmount" Type="Double" Nullable="false" />
+          <Property Name="OnhandAmount" Type="Double" Nullable="false" />
+          <Property Name="Deductamount" Type="Double" Nullable="false" />
+          <Property Name="EmployeeSalaryMastId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeSalaryMast" Relationship="Self.FK_EmployeeSalaryMastEmpMonthlySalary" FromRole="EmpMonthlySalaries" ToRole="EmployeeSalaryMasts" />
+          <NavigationProperty Name="EmpMonthlyComponets" Relationship="Self.FK_EmpMonthlySalaryEmpMonthlyComponet" FromRole="EmpMonthlySalaries" ToRole="EmpMonthlyComponets" />
+        </EntityType>
+        <EntityType Name="EmpSalaryComponent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="EmployeeSalaryMastId" Type="Int32" Nullable="false" />
+          <Property Name="SalaryComponentMastId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeSalaryMast" Relationship="Self.FK_EmployeeSalaryMastEmpSalaryComponent" FromRole="EmpSalaryComponents" ToRole="EmployeeSalaryMasts" />
+          <NavigationProperty Name="EmpMonthlyComponets" Relationship="Self.FK_EmpSalaryComponentEmpMonthlyComponet" FromRole="EmpSalaryComponents" ToRole="EmpMonthlyComponets" />
+          <NavigationProperty Name="SalaryComponentMast" Relationship="Self.FK_SalaryComponentMastEmpSalaryComponent" FromRole="EmpSalaryComponents" ToRole="SalaryComponentMasts" />
+        </EntityType>
+        <EntityType Name="FYMaster">
+          <Key>
+            <PropertyRef Name="FY" />
+          </Key>
+          <Property Name="FY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmployeeMasts" Relationship="Self.FK_FYMasterEmployeeMast" FromRole="FYMasters" ToRole="EmployeeMasts" />
+          <NavigationProperty Name="EmployeeSalaryMasts" Relationship="Self.FK_FYMasterEmployeeSalaryMast" FromRole="FYMasters" ToRole="EmployeeSalaryMasts" />
+          <NavigationProperty Name="EmployerMasts" Relationship="Self.FK_FYMasterEmployerMast" FromRole="FYMasters" ToRole="EmployerMasts" />
+          <NavigationProperty Name="HolidaysMasts" Relationship="Self.FK_FYMasterHolidaysMast" FromRole="FYMasters" ToRole="HolidaysMasts" />
+          <NavigationProperty Name="LeaveMasts" Relationship="Self.FK_FYMasterLeaveMast" FromRole="FYMasters" ToRole="LeaveMasts" />
+        </EntityType>
+        <EntityType Name="HolidaysMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolidaysName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HolidaysDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="wfd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FYMasterFY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmployerMast_cc" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployerMast" Relationship="Self.FK_EmployerMastHolidaysMast" FromRole="HolidaysMasts" ToRole="EmployerMasts" />
+          <NavigationProperty Name="FYMaster" Relationship="Self.FK_FYMasterHolidaysMast" FromRole="HolidaysMasts" ToRole="FYMasters" />
+        </EntityType>
+        <EntityType Name="LeaveMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeaveName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NoofDays" Type="Int32" />
+          <Property Name="wfd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FYMasterFY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmployerMast_cc" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmpLeaves" Relationship="Self.FK_LeaveMastEmpLeaves" FromRole="LeaveMasts" ToRole="EmpLeaves" />
+          <NavigationProperty Name="EmployerMast" Relationship="Self.FK_EmployerMastLeaveMast" FromRole="LeaveMasts" ToRole="EmployerMasts" />
+          <NavigationProperty Name="FYMaster" Relationship="Self.FK_FYMasterLeaveMast" FromRole="LeaveMasts" ToRole="FYMasters" />
+        </EntityType>
+        <EntityType Name="SalaryComponentMast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="wfd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CompType" Type="HRP1Model.Comptype" Nullable="false" />
+          <Property Name="TypeRsPer" Type="HRP1Model.TypePerRs" annotation:StoreGeneratedPattern="None" Nullable="false" />
+          <Property Name="amount" Type="Double" Nullable="false" />
+          <Property Name="basedoncomponent" Type="Int32" />
+          <Property Name="Compcalcutiontype" Type="HRP1Model.Addmine" Nullable="false" />
+          <NavigationProperty Name="EmpSalaryComponents" Relationship="Self.FK_SalaryComponentMastEmpSalaryComponent" FromRole="SalaryComponentMasts" ToRole="EmpSalaryComponents" />
+        </EntityType>
+        <Association Name="FK_DeptMastEmployeeMast">
+          <End Role="DeptMasts" Type="Self.DeptMast" Multiplicity="1" />
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeptMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeMasts">
+              <PropertyRef Name="DeptMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeMastEmpLeaves">
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="1" />
+          <End Role="EmpLeaves" Type="Self.EmpLeaf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpLeaves">
+              <PropertyRef Name="EmployeeMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LeaveMastEmpLeaves">
+          <End Role="LeaveMasts" Type="Self.LeaveMast" Multiplicity="1" />
+          <End Role="EmpLeaves" Type="Self.EmpLeaf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeaveMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpLeaves">
+              <PropertyRef Name="LeaveMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpLevelEmployeeMast">
+          <End Role="EmpLevels" Type="Self.EmpLevel" Multiplicity="1" />
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmpLevels">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeMasts">
+              <PropertyRef Name="EmpLevelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeMastEmployeeSalaryMast">
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="1" />
+          <End Role="EmployeeSalaryMasts" Type="Self.EmployeeSalaryMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeSalaryMasts">
+              <PropertyRef Name="EmployeeMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployerMastEmployeeMast">
+          <End Role="EmployerMasts" Type="Self.EmployerMast" Multiplicity="1" />
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployerMasts">
+              <PropertyRef Name="cc" />
+            </Principal>
+            <Dependent Role="EmployeeMasts">
+              <PropertyRef Name="EmployerMast_cc1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FYMasterEmployeeMast">
+          <End Role="FYMasters" Type="Self.FYMaster" Multiplicity="1" />
+          <End Role="EmployeeMasts" Type="Self.EmployeeMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FYMasters">
+              <PropertyRef Name="FY" />
+            </Principal>
+            <Dependent Role="EmployeeMasts">
+              <PropertyRef Name="FYMasterFY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeSalaryMastEmpMonthlySalary">
+          <End Role="EmployeeSalaryMasts" Type="Self.EmployeeSalaryMast" Multiplicity="1" />
+          <End Role="EmpMonthlySalaries" Type="Self.EmpMonthlySalary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeSalaryMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpMonthlySalaries">
+              <PropertyRef Name="EmployeeSalaryMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeSalaryMastEmpSalaryComponent">
+          <End Role="EmployeeSalaryMasts" Type="Self.EmployeeSalaryMast" Multiplicity="1" />
+          <End Role="EmpSalaryComponents" Type="Self.EmpSalaryComponent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeSalaryMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpSalaryComponents">
+              <PropertyRef Name="EmployeeSalaryMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FYMasterEmployeeSalaryMast">
+          <End Role="FYMasters" Type="Self.FYMaster" Multiplicity="1" />
+          <End Role="EmployeeSalaryMasts" Type="Self.EmployeeSalaryMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FYMasters">
+              <PropertyRef Name="FY" />
+            </Principal>
+            <Dependent Role="EmployeeSalaryMasts">
+              <PropertyRef Name="FYMasterFY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployerMastHolidaysMast">
+          <End Role="EmployerMasts" Type="Self.EmployerMast" Multiplicity="1" />
+          <End Role="HolidaysMasts" Type="Self.HolidaysMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployerMasts">
+              <PropertyRef Name="cc" />
+            </Principal>
+            <Dependent Role="HolidaysMasts">
+              <PropertyRef Name="EmployerMast_cc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployerMastLeaveMast">
+          <End Role="EmployerMasts" Type="Self.EmployerMast" Multiplicity="1" />
+          <End Role="LeaveMasts" Type="Self.LeaveMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployerMasts">
+              <PropertyRef Name="cc" />
+            </Principal>
+            <Dependent Role="LeaveMasts">
+              <PropertyRef Name="EmployerMast_cc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FYMasterEmployerMast">
+          <End Role="FYMasters" Type="Self.FYMaster" Multiplicity="1" />
+          <End Role="EmployerMasts" Type="Self.EmployerMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FYMasters">
+              <PropertyRef Name="FY" />
+            </Principal>
+            <Dependent Role="EmployerMasts">
+              <PropertyRef Name="FYMasterFY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpMonthlySalaryEmpMonthlyComponet">
+          <End Role="EmpMonthlySalaries" Type="Self.EmpMonthlySalary" Multiplicity="1" />
+          <End Role="EmpMonthlyComponets" Type="Self.EmpMonthlyComponet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmpMonthlySalaries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpMonthlyComponets">
+              <PropertyRef Name="EmpMonthlySalaryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpSalaryComponentEmpMonthlyComponet">
+          <End Role="EmpSalaryComponents" Type="Self.EmpSalaryComponent" Multiplicity="1" />
+          <End Role="EmpMonthlyComponets" Type="Self.EmpMonthlyComponet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmpSalaryComponents">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpMonthlyComponets">
+              <PropertyRef Name="EmpSalaryComponentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SalaryComponentMastEmpSalaryComponent">
+          <End Role="SalaryComponentMasts" Type="Self.SalaryComponentMast" Multiplicity="1" />
+          <End Role="EmpSalaryComponents" Type="Self.EmpSalaryComponent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalaryComponentMasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpSalaryComponents">
+              <PropertyRef Name="SalaryComponentMastId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FYMasterHolidaysMast">
+          <End Role="FYMasters" Type="Self.FYMaster" Multiplicity="1" />
+          <End Role="HolidaysMasts" Type="Self.HolidaysMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FYMasters">
+              <PropertyRef Name="FY" />
+            </Principal>
+            <Dependent Role="HolidaysMasts">
+              <PropertyRef Name="FYMasterFY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FYMasterLeaveMast">
+          <End Role="FYMasters" Type="Self.FYMaster" Multiplicity="1" />
+          <End Role="LeaveMasts" Type="Self.LeaveMast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FYMasters">
+              <PropertyRef Name="FY" />
+            </Principal>
+            <Dependent Role="LeaveMasts">
+              <PropertyRef Name="FYMasterFY" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HRP1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DeptMasts" EntityType="Self.DeptMast" />
+          <EntitySet Name="EmpLeaves" EntityType="Self.EmpLeaf" />
+          <EntitySet Name="EmpLevels" EntityType="Self.EmpLevel" />
+          <EntitySet Name="EmployeeMasts" EntityType="Self.EmployeeMast" />
+          <EntitySet Name="EmployeeSalaryMasts" EntityType="Self.EmployeeSalaryMast" />
+          <EntitySet Name="EmployerMasts" EntityType="Self.EmployerMast" />
+          <EntitySet Name="EmpMonthlyComponets" EntityType="Self.EmpMonthlyComponet" />
+          <EntitySet Name="EmpMonthlySalaries" EntityType="Self.EmpMonthlySalary" />
+          <EntitySet Name="EmpSalaryComponents" EntityType="Self.EmpSalaryComponent" />
+          <EntitySet Name="FYMasters" EntityType="Self.FYMaster" />
+          <EntitySet Name="HolidaysMasts" EntityType="Self.HolidaysMast" />
+          <EntitySet Name="LeaveMasts" EntityType="Self.LeaveMast" />
+          <EntitySet Name="SalaryComponentMasts" EntityType="Self.SalaryComponentMast" />
+          <AssociationSet Name="FK_DeptMastEmployeeMast" Association="Self.FK_DeptMastEmployeeMast">
+            <End Role="DeptMasts" EntitySet="DeptMasts" />
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeMastEmpLeaves" Association="Self.FK_EmployeeMastEmpLeaves">
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+            <End Role="EmpLeaves" EntitySet="EmpLeaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LeaveMastEmpLeaves" Association="Self.FK_LeaveMastEmpLeaves">
+            <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+            <End Role="EmpLeaves" EntitySet="EmpLeaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpLevelEmployeeMast" Association="Self.FK_EmpLevelEmployeeMast">
+            <End Role="EmpLevels" EntitySet="EmpLevels" />
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeMastEmployeeSalaryMast" Association="Self.FK_EmployeeMastEmployeeSalaryMast">
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+            <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployerMastEmployeeMast" Association="Self.FK_EmployerMastEmployeeMast">
+            <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FYMasterEmployeeMast" Association="Self.FK_FYMasterEmployeeMast">
+            <End Role="FYMasters" EntitySet="FYMasters" />
+            <End Role="EmployeeMasts" EntitySet="EmployeeMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeSalaryMastEmpMonthlySalary" Association="Self.FK_EmployeeSalaryMastEmpMonthlySalary">
+            <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+            <End Role="EmpMonthlySalaries" EntitySet="EmpMonthlySalaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeSalaryMastEmpSalaryComponent" Association="Self.FK_EmployeeSalaryMastEmpSalaryComponent">
+            <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+            <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FYMasterEmployeeSalaryMast" Association="Self.FK_FYMasterEmployeeSalaryMast">
+            <End Role="FYMasters" EntitySet="FYMasters" />
+            <End Role="EmployeeSalaryMasts" EntitySet="EmployeeSalaryMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployerMastHolidaysMast" Association="Self.FK_EmployerMastHolidaysMast">
+            <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+            <End Role="HolidaysMasts" EntitySet="HolidaysMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployerMastLeaveMast" Association="Self.FK_EmployerMastLeaveMast">
+            <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+            <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FYMasterEmployerMast" Association="Self.FK_FYMasterEmployerMast">
+            <End Role="FYMasters" EntitySet="FYMasters" />
+            <End Role="EmployerMasts" EntitySet="EmployerMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpMonthlySalaryEmpMonthlyComponet" Association="Self.FK_EmpMonthlySalaryEmpMonthlyComponet">
+            <End Role="EmpMonthlySalaries" EntitySet="EmpMonthlySalaries" />
+            <End Role="EmpMonthlyComponets" EntitySet="EmpMonthlyComponets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpSalaryComponentEmpMonthlyComponet" Association="Self.FK_EmpSalaryComponentEmpMonthlyComponet">
+            <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+            <End Role="EmpMonthlyComponets" EntitySet="EmpMonthlyComponets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SalaryComponentMastEmpSalaryComponent" Association="Self.FK_SalaryComponentMastEmpSalaryComponent">
+            <End Role="SalaryComponentMasts" EntitySet="SalaryComponentMasts" />
+            <End Role="EmpSalaryComponents" EntitySet="EmpSalaryComponents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FYMasterHolidaysMast" Association="Self.FK_FYMasterHolidaysMast">
+            <End Role="FYMasters" EntitySet="FYMasters" />
+            <End Role="HolidaysMasts" EntitySet="HolidaysMasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FYMasterLeaveMast" Association="Self.FK_FYMasterLeaveMast">
+            <End Role="FYMasters" EntitySet="FYMasters" />
+            <End Role="LeaveMasts" EntitySet="LeaveMasts" />
+          </AssociationSet>
+          <EntitySet Name="View_2" EntityType="HRP1Model.View_2" />
+        </EntityContainer>
+        <EnumType Name="TypePerRs">
+          <Member Name="Rs" Value="1" />
+          <Member Name="Per" Value="2" />
+        </EnumType>
+        <EnumType Name="Comptype">
+          <Member Name="Day" Value="1" />
+          <Member Name="Month" Value="2" />
+          <Member Name="Year" Value="3" />
+        </EnumType>
+        <EnumType Name="Addmine">
+          <Member Name="Add" Value="1" />
+          <Member Name="Mines" Value="2" />
+        </EnumType>
+        <EntityType Name="View_2">
+          <Key>
+            <PropertyRef Name="EmployeeSalaryMastsid" />
+            <PropertyRef Name="EmployeeSalaryMastswfd" />
+            <PropertyRef Name="CTCMonthly" />
+            <PropertyRef Name="CTCYear" />
+            <PropertyRef Name="Fixcompamt" />
+            <PropertyRef Name="flexcompamt" />
+            <PropertyRef Name="EmployeeMastId" />
+            <PropertyRef Name="FYMasterFY" />
+            <PropertyRef Name="EmpSalaryComponentsid" />
+            <PropertyRef Name="EmpSalaryComponentsamount" />
+            <PropertyRef Name="EmployeeSalaryMastId" />
+            <PropertyRef Name="SalaryComponentMastId" />
+            <PropertyRef Name="SalaryComponentMastsid" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="CompType" />
+            <PropertyRef Name="TypeRsPer" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="Compcalcutiontype" />
+          </Key>
+          <Property Name="EmployeeSalaryMastsid" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeSalaryMastswfd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CTCMonthly" Type="Double" Nullable="false" />
+          <Property Name="CTCYear" Type="Double" Nullable="false" />
+          <Property Name="Fixcompamt" Type="Double" Nullable="false" />
+          <Property Name="flexcompamt" Type="Double" Nullable="false" />
+          <Property Name="EmployeeMastId" Type="Int32" Nullable="false" />
+          <Property Name="FYMasterFY" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EmpSalaryComponentsid" Type="Int32" Nullable="false" />
+          <Property Name="EmpSalaryComponentsamount" Type="Double" Nullable="false" />
+          <Property Name="EmployeeSalaryMastId" Type="Int32" Nullable="false" />
+          <Property Name="SalaryComponentMastId" Type="Int32" Nullable="false" />
+          <Property Name="SalaryComponentMastsid" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompType" Type="Int32" Nullable="false" />
+          <Property Name="TypeRsPer" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Double" Nullable="false" />
+          <Property Name="basedoncomponent" Type="Int32" />
+          <Property Name="Compcalcutiontype" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HRP1ModelStoreContainer" CdmEntityContainer="HRP1Entities">
+    <EntitySetMapping Name="DeptMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.DeptMast)">
+        <MappingFragment StoreEntitySet="DeptMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dept_Name" ColumnName="Dept_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpLeaves">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmpLeaf)">
+        <MappingFragment StoreEntitySet="EmpLeaves">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LeaveDays" ColumnName="LeaveDays" />
+          <ScalarProperty Name="LeaveStatus" ColumnName="LeaveStatus" />
+          <ScalarProperty Name="EmployeeMastId" ColumnName="EmployeeMastId" />
+          <ScalarProperty Name="LeaveMastId" ColumnName="LeaveMastId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpLevels">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmpLevel)">
+        <MappingFragment StoreEntitySet="EmpLevels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="wfd" ColumnName="wfd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmployeeMast)">
+        <MappingFragment StoreEntitySet="EmployeeMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PANno" ColumnName="PANno" />
+          <ScalarProperty Name="UANNo" ColumnName="UANNo" />
+          <ScalarProperty Name="ESINo" ColumnName="ESINo" />
+          <ScalarProperty Name="PFNo" ColumnName="PFNo" />
+          <ScalarProperty Name="JoinofDate" ColumnName="JoinofDate" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="pinCode" ColumnName="pinCode" />
+          <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="Accountno" ColumnName="Accountno" />
+          <ScalarProperty Name="IFSCCode" ColumnName="IFSCCode" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+          <ScalarProperty Name="DeptMastId" ColumnName="DeptMastId" />
+          <ScalarProperty Name="EmpLevelId" ColumnName="EmpLevelId" />
+          <ScalarProperty Name="EmployerMast_cc1" ColumnName="EmployerMast_cc1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeSalaryMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmployeeSalaryMast)">
+        <MappingFragment StoreEntitySet="EmployeeSalaryMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="wfd" ColumnName="wfd" />
+          <ScalarProperty Name="CTCMonthly" ColumnName="CTCMonthly" />
+          <ScalarProperty Name="CTCYear" ColumnName="CTCYear" />
+          <ScalarProperty Name="Fixcompamt" ColumnName="Fixcompamt" />
+          <ScalarProperty Name="flexcompamt" ColumnName="flexcompamt" />
+          <ScalarProperty Name="EmployeeMastId" ColumnName="EmployeeMastId" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployerMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmployerMast)">
+        <MappingFragment StoreEntitySet="EmployerMasts">
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PANNo" ColumnName="PANNo" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpMonthlyComponets">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmpMonthlyComponet)">
+        <MappingFragment StoreEntitySet="EmpMonthlyComponets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="EmpMonthlySalaryId" ColumnName="EmpMonthlySalaryId" />
+          <ScalarProperty Name="EmpSalaryComponentId" ColumnName="EmpSalaryComponentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpMonthlySalaries">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmpMonthlySalary)">
+        <MappingFragment StoreEntitySet="EmpMonthlySalaries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkingMonthDate" ColumnName="WorkingMonthDate" />
+          <ScalarProperty Name="TotalDays" ColumnName="TotalDays" />
+          <ScalarProperty Name="WorkingDays" ColumnName="WorkingDays" />
+          <ScalarProperty Name="LeaveDays" ColumnName="LeaveDays" />
+          <ScalarProperty Name="TotalSalaryAmount" ColumnName="TotalSalaryAmount" />
+          <ScalarProperty Name="OnhandAmount" ColumnName="OnhandAmount" />
+          <ScalarProperty Name="Deductamount" ColumnName="Deductamount" />
+          <ScalarProperty Name="EmployeeSalaryMastId" ColumnName="EmployeeSalaryMastId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpSalaryComponents">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.EmpSalaryComponent)">
+        <MappingFragment StoreEntitySet="EmpSalaryComponents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="EmployeeSalaryMastId" ColumnName="EmployeeSalaryMastId" />
+          <ScalarProperty Name="SalaryComponentMastId" ColumnName="SalaryComponentMastId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FYMasters">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.FYMaster)">
+        <MappingFragment StoreEntitySet="FYMasters">
+          <ScalarProperty Name="FY" ColumnName="FY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HolidaysMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.HolidaysMast)">
+        <MappingFragment StoreEntitySet="HolidaysMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HolidaysName" ColumnName="HolidaysName" />
+          <ScalarProperty Name="HolidaysDate" ColumnName="HolidaysDate" />
+          <ScalarProperty Name="wfd" ColumnName="wfd" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+          <ScalarProperty Name="EmployerMast_cc" ColumnName="EmployerMast_cc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeaveMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.LeaveMast)">
+        <MappingFragment StoreEntitySet="LeaveMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LeaveName" ColumnName="LeaveName" />
+          <ScalarProperty Name="NoofDays" ColumnName="NoofDays" />
+          <ScalarProperty Name="wfd" ColumnName="wfd" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+          <ScalarProperty Name="EmployerMast_cc" ColumnName="EmployerMast_cc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryComponentMasts">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.SalaryComponentMast)">
+        <MappingFragment StoreEntitySet="SalaryComponentMasts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="wfd" ColumnName="wfd" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompType" ColumnName="CompType" />
+          <ScalarProperty Name="TypeRsPer" ColumnName="TypeRsPer" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="basedoncomponent" ColumnName="basedoncomponent" />
+          <ScalarProperty Name="Compcalcutiontype" ColumnName="Compcalcutiontype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_2">
+      <EntityTypeMapping TypeName="IsTypeOf(HRP1Model.View_2)">
+        <MappingFragment StoreEntitySet="View_2">
+          <ScalarProperty Name="EmployeeSalaryMastsid" ColumnName="EmployeeSalaryMastsid" />
+          <ScalarProperty Name="EmployeeSalaryMastswfd" ColumnName="EmployeeSalaryMastswfd" />
+          <ScalarProperty Name="CTCMonthly" ColumnName="CTCMonthly" />
+          <ScalarProperty Name="CTCYear" ColumnName="CTCYear" />
+          <ScalarProperty Name="Fixcompamt" ColumnName="Fixcompamt" />
+          <ScalarProperty Name="flexcompamt" ColumnName="flexcompamt" />
+          <ScalarProperty Name="EmployeeMastId" ColumnName="EmployeeMastId" />
+          <ScalarProperty Name="FYMasterFY" ColumnName="FYMasterFY" />
+          <ScalarProperty Name="EmpSalaryComponentsid" ColumnName="EmpSalaryComponentsid" />
+          <ScalarProperty Name="EmpSalaryComponentsamount" ColumnName="EmpSalaryComponentsamount" />
+          <ScalarProperty Name="EmployeeSalaryMastId" ColumnName="EmployeeSalaryMastId" />
+          <ScalarProperty Name="SalaryComponentMastId" ColumnName="SalaryComponentMastId" />
+          <ScalarProperty Name="SalaryComponentMastsid" ColumnName="SalaryComponentMastsid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompType" ColumnName="CompType" />
+          <ScalarProperty Name="TypeRsPer" ColumnName="TypeRsPer" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Compcalcutiontype" ColumnName="Compcalcutiontype" />
+          <ScalarProperty Name="basedoncomponent" ColumnName="basedoncomponent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da592df634be4f6e8c6209c392007b87" Name="Diagram1" ZoomLevel="62" SnapToGrid="false" ShowGrid="true" DisplayType="true">
+        <EntityTypeShape EntityType="HRPModel.DeptMast" Width="1.5" PointX="5.2732041180567171" PointY="9.9175626655154918" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmpLeaves" Width="1.970430103908841" PointX="10.550197860317683" PointY="7.9350917955073221" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmpLevel" Width="1.5" PointX="5.7654569657085091" PointY="6.8910916777642646" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmployeeMast" Width="2.125" PointX="0.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmployeeSalaryMast" Width="2.125" PointX="13.12701601960805" PointY="6.3293384595253128" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmployerMast" Width="1.5" PointX="3.2841435121947233" PointY="3.1857639113096168" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmpMonthlyComponet" Width="2.375" PointX="14.283564787257163" PointY="0.61792488200508777" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmpMonthlySalary" Width="2" PointX="11.191550873610893" PointY="0.57233796008851068" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.EmpSalaryComponent" Width="1.875" PointX="16.174525718478414" PointY="4.7103681666401194" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.FYMaster" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.HolidaysMast" Width="1.8182870243894467" PointX="8.25602966639031" PointY="7.3740292003342427" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.LeaveMast" Width="1.5" PointX="7.5228494564216666" PointY="3.5094086011168115" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRPModel.SalaryComponentMast" Width="1.9872311790484414" PointX="5.0486111042124246" PointY="2.5358796629732758" IsExpanded="true" />
+        <AssociationConnector Association="HRPModel.FYMasterEmployeeMast" />
+        <AssociationConnector Association="HRPModel.FYMasterEmployerMast" />
+        <AssociationConnector Association="HRPModel.FYMasterLeaveMast" />
+        <AssociationConnector Association="HRPModel.FYMasterHolidaysMast" />
+        <AssociationConnector Association="HRPModel.DeptMastEmployeeMast" />
+        <AssociationConnector Association="HRPModel.EmpLevelEmployeeMast" />
+        <AssociationConnector Association="HRPModel.EmployeeMastEmpLeaves" />
+        <AssociationConnector Association="HRPModel.EmployeeMastEmployeeSalaryMast" />
+        <AssociationConnector Association="HRPModel.EmployeeSalaryMastEmpSalaryComponent" />
+        <AssociationConnector Association="HRPModel.SalaryComponentMastEmpSalaryComponent" />
+        <AssociationConnector Association="HRPModel.EmpMonthlySalaryEmpMonthlyComponet" />
+        <AssociationConnector Association="HRPModel.EmployeeSalaryMastEmpMonthlySalary" />
+        <AssociationConnector Association="HRPModel.EmpSalaryComponentEmpMonthlyComponet" />
+        <AssociationConnector Association="HRPModel.EmployerMastEmployeeMast" />
+        <AssociationConnector Association="HRPModel.EmployerMastHolidaysMast" />
+        <AssociationConnector Association="HRPModel.EmployerMastLeaveMast" />
+        <AssociationConnector Association="HRPModel.FYMasterEmployeeSalaryMast" />
+        <AssociationConnector Association="HRPModel.LeaveMastEmpLeaves" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

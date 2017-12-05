@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="659b8e43ad4046afa8cd68c537516721" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="HRP1Model.DeptMast" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmpLeaf" Width="1.5" PointX="11.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmpLevel" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmployeeMast" Width="1.5" PointX="4.125" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmployeeSalaryMast" Width="2" PointX="6.375" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmployerMast" Width="1.5" PointX="10" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmpMonthlyComponet" Width="2.375" PointX="12.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmpMonthlySalary" Width="2.625" PointX="13.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.EmpSalaryComponent" Width="2.125" PointX="3.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.FYMaster" Width="1.5" PointX="0.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.HolidaysMast" Width="1.5" PointX="6.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.LeaveMast" Width="1.5" PointX="9.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRP1Model.SalaryComponentMast" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="HRP1Model.FK_DeptMastEmployeeMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployeeMastEmpLeaves" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_LeaveMastEmpLeaves" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmpLevelEmployeeMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployeeMastEmployeeSalaryMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployerMastEmployeeMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_FYMasterEmployeeMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployeeSalaryMastEmpMonthlySalary" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployeeSalaryMastEmpSalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_FYMasterEmployeeSalaryMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployerMastHolidaysMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmployerMastLeaveMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_FYMasterEmployerMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmpMonthlySalaryEmpMonthlyComponet" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_EmpSalaryComponentEmpMonthlyComponet" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_SalaryComponentMastEmpSalaryComponent" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_FYMasterHolidaysMast" ManuallyRouted="false" />
+        <AssociationConnector Association="HRP1Model.FK_FYMasterLeaveMast" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HRP1Model.View_2" Width="1.5" PointX="12.875" PointY="8.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
