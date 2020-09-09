@@ -5,20 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My HR Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required:=False)
-    <style>
-        #nav ul {
-            display: none;
-        }
-
-        #nav li:hover > ul {
-            display: block;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -103,3 +90,17 @@
  
 </body>
 </html>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+ 
+@RenderSection("scripts", required:=False)
+<style>
+    #nav ul {
+        display: none;
+    }
+
+    #nav li:hover > ul {
+        display: block;
+    }
+</style>

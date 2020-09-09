@@ -8,7 +8,7 @@ End Code
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table" id="table"><thead>
     <tr>
         <th>
             @Html.DisplayNameFor(Function(model) model.wfd)
@@ -33,7 +33,7 @@ End Code
         </th>
         <th></th>
     </tr>
-
+</thead><tbody>
 @For Each item In Model
     @<tr>
         <td>
@@ -64,5 +64,15 @@ End Code
         </td>
     </tr>
 Next
-
+        </tbody>
 </table>
+
+
+@section Scripts
+    <script>
+    $(document).ready(function () {
+        $('#table').DataTable();
+    });
+
+    </script>
+End Section
